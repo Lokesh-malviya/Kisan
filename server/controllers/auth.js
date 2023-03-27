@@ -1,7 +1,6 @@
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 import User from "../models/User.js";
-
 export const register = async(req,res) => {
     try{
         const {
@@ -9,23 +8,19 @@ export const register = async(req,res) => {
             lastName,
             mobileNo,
             password,
-            picturePath,
             location,
-            aadharnumber,
+            aadharnumber
         } = req.body;
         const salt = await bcrypt.genSalt();
         const passwordHash = await bcrypt.hash(password,salt);
-
+        
         const newUser = new User({
             firstName,
             lastName,
             mobileNo,
             password:passwordHash,
-            picturePath,
             location,
-            aadharnumber,
-            crops,
-            landsize
+            aadharnumber
         });
 
         const savedUser = await newUser.save();
@@ -35,7 +30,6 @@ export const register = async(req,res) => {
        res.status(500).json({error: err.message}); 
     }
 }
-
 export const login = async (req,res) =>{
     try {
         const {mobileNo,password} = req.body;

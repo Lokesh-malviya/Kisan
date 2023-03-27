@@ -59,7 +59,7 @@ export const users = [
     __v: 0,
   }, */
   
-  {
+  /* {
     _id: userIds[3],
     firstName: "Borni",
     lastName: "devi",
@@ -74,7 +74,7 @@ export const users = [
     createdAt: 1219214568,
     updatedAt: 1219214568,
     __v: 0,
-  },
+  }, */
   /*
   {
     _id: userIds[4],

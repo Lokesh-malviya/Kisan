@@ -16,8 +16,6 @@ const UserSchema = new mongoose.Schema({
     mobileNo:{
         type:String,
         required:true,
-        min:10,
-        max:10
     },
     password:{
         type: String,
@@ -32,15 +30,15 @@ const UserSchema = new mongoose.Schema({
     aadharnumber:{
         type:String,
         required:true,
-        min:12,
-        max:12,
         unique: true
     },
     crops:{
         type:Array,
         default:[]
     },
-    landsize:Number,
+    landsize:{
+        type:String, 
+    },
 
 },
 { timestamp:true} );

@@ -49,7 +49,7 @@ const storage= multer.diskStorage({
 
 const upload = multer({ storage });
 /* File storage */
-app.post("/auth/register",upload.single("picture"),register);
+app.post("/auth/register",register);
 /* app.post("/crop",verifyToken,upload.single("picture"),createPost);
 app.post("/cropdetect",verifyToken,upload.single("picture"),createPost)) */
 
@@ -68,7 +68,7 @@ mongoose
 .then(()=>{
     app.listen(PORT, ()=> console.log(`Server Port: ${PORT}`));
     /*Add data one time */
-    User.insertMany(users);
+    /* User.insertMany(users); */
         /* Post.insertMany(posts); */
 }).catch((error)=> console.log(`${error} did not connet`));
 

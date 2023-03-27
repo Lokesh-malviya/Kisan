@@ -1,0 +1,50 @@
+.login__subsection{
+    grid-area: left;
+}
+.login__formSection{
+    grid-area: right;
+    padding: 1rem;
+  
+   
+}
+.login__farmer{
+    
+    height:  40rem;
+    
+}
+.login__section{
+    display: grid;
+    grid-template-areas: 
+                    'left right';
+    grid-template-columns: 1.2fr 1fr;
+    column-gap: 2rem;
+    align-items: center;
+   /*  border: 2px solid #000; */
+   background-color: var(--body-color);
+  color: var(--text-color);
+   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+}
+#components-form-demo-normal-login .login-form {
+    max-width: 300px;
+  }
+  #components-form-demo-normal-login .login-form-forgot {
+    float: right;
+  }
+  #components-form-demo-normal-login .ant-col-rtl .login-form-forgot {
+    float: left;
+  }
+  #components-form-demo-normal-login .login-form-button {
+    width: 100%;
+  }
+
+  .typo{
+    display: grid;
+    justify-items: start;
+  }
+
+  .same{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-left: 0;
+  }
