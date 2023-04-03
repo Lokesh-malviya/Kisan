@@ -1,0 +1,34 @@
+.defaul_image{
+    width: 6.5rem;
+    height: 6.59rem;
+    border: 5px solid #2D9D75;
+    border-radius: 5px;
+    
+}
+.name{
+    margin-top: -3px;
+    font-size: 20px;
+    color: #2A4D4E;
+}
+.profile{
+   padding: 1rem;
+    justify-content: center;
+    display: grid;
+    margin-top: 1.3rem;
+    
+    
+}
+.profile__up{
+    text-align: start;
+    width:22.5rem;
+    display: flex;
+    justify-content: space-between;
+    color: #2A4D4E;
+}
+.mob{
+    margin-right: 10px;
+}
+.list__section
+{
+    overflow-y: scroll;
+}

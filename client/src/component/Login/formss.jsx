@@ -12,8 +12,8 @@ import { Formik } from "formik";
 import * as yup from "yup";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
-/* import { setLogin } from "state";
-import Dropzone from "react-dropzone"; */
+import { setLogin } from "../../state/index";
+/*import Dropzone from "react-dropzone"; */
 import FlexBetween from "../../scene/FlexBetween";
 
 const registerSchema = yup.object().shape({
@@ -48,8 +48,8 @@ const initialValuesRegister = {
 const Form = () => {
   const [pageType, setPageType] = useState("login");
   const { palette } = useTheme();
-/*   const dispatch = useDispatch(); */
-  /* const navigate = useNavigate(); */
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
   const isNonMobile = useMediaQuery("(min-width:600px)");
   const isLogin = pageType === "login";
   const isRegister = pageType === "register";
@@ -89,13 +89,13 @@ const Form = () => {
     const loggedIn = await loggedInResponse.json();
     onSubmitProps.resetForm();
     if (loggedIn) {
-      /* dispatch(
+       dispatch(
         setLogin({
           user: loggedIn.user,
           token: loggedIn.token,
         })
-      ); */
-      /* navigate("/home"); */
+      );
+       navigate("/home");
     }
   };
 
@@ -210,8 +210,8 @@ const Form = () => {
               sx={{
                 m: "2rem 0",
                 p: "1rem",
-                backgroundColor: palette.primary.main,
-                color: palette.background.alt,
+                backgroundColor: '#2D9D75',
+                color: '#fff',
                 "&:hover": { color: palette.primary.main },
               }}
             >
