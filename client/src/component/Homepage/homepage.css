@@ -39,15 +39,11 @@
 }
 .middle__subsection{
     display: grid;
-    grid-template-columns: 10rem 1fr;
+    grid-template-columns: 10rem 1fr 12rem ;
     margin-top: 0.5rem;
+    column-gap: 0.6rem;
 }
-.middle__left{
-    background-color: var(--body-color);
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    border-radius: 10px;
-    
-}
+
 .sun__image{
     margin-top: 0.3rem;
     width: 10rem;
@@ -57,6 +53,8 @@
     display: grid;
    justify-content: center;
     background-image: radial-gradient(circle 248px at center, #16d9e3 0%, #30c7ec 47%, #46aef7 100%);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 10px;
 }
 .lef{
     font-size: 2rem;
@@ -66,6 +64,7 @@
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-radius: 10px;
     padding: 20px;
+    
 }
 .whe{
     margin-top: -10px;
@@ -73,4 +72,96 @@
     padding-bottom: 1rem;
     font-size: 1rem;
     font-weight: bold;
+}
+.middle__right{
+    display: grid;
+   justify-content: center;
+    
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 10px;
+}
+.__lef{
+    color: #000;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+}
+.__rig{
+    margin-top: 0.6rem;
+}
+.middle__middle{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 10px;
+}
+.addon{
+    background-color: #2D9D75;
+}
+.small_div{
+    width: 1rem;
+    height: 1rem;
+    background-color: #2D9D75;
+    transform: translate(-5px,4px);
+}
+.side{
+    display: flex;
+    column-gap: 2rem;
+}
+
+.crop__added{
+    display:grid;
+    grid-template-columns: 60px 0.8fr 80px 10px 10px;
+    column-gap: 1rem;
+    padding: 11px;
+
+    border-bottom-width:1px ;
+    border-bottom-style: solid;
+    border-bottom-color: #847d7d6d;
+}
+.delete,
+.adds{
+    /* background-color: #a39d9d44; */
+    cursor: pointer;
+}
+.cropname{
+    font-weight: bolder;
+    color: #000;
+    text-align: start;
+}
+.crop__timing{
+    font-size: 13px;
+    text-align: end;
+}
+.crop__price{
+    color: green;
+    font-size: 13px;
+
+}
+.crops__grown{
+    display: grid;
+    row-gap: 3px;
+   
+    
+}
+.crops__down{
+  
+    display: flex;
+
+  justify-content:end;
+  margin-right: 1rem;
+}
+.add_button{
+    font-size: 15;
+    color: #2D9D75;
+    font-weight: bolder;
+}
+.ant-list-item-meta{
+    display: block;
+}
+.tes{
+    color: green;
+}
+.head{
+    font-weight: bolder;
+    color: #000;
+    text-align: start;
 }

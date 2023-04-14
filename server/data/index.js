@@ -11,12 +11,12 @@ const userIds = [
   new mongoose.Types.ObjectId(),
 ];
 
-export const users = [
-  /* {
+/*export const users = [
+ {
     _id: userIds[0],
     firstName: "test",
     lastName: "me",
-    mobileNo: "8855900269",
+    mobileNo: "8855900",269",
     password: "$2b$10$dsasdgsagasda//G9JxQ4bQ8KXf4OAIe/X/AK9skyWUy",
     picturePath: "p11.jpeg",
     location: "Bishnupur, Manipur",
@@ -139,8 +139,8 @@ export const users = [
     createdAt: 1369908044,
     updatedAt: 1359322268,
     __v: 0,
-  }, */
-];
+  }, 
+];*/
 
 /* export const posts = [
   {
@@ -283,3 +283,50 @@ export const users = [
     ],
   },
 ]; */
+
+export const graphs = [
+  {
+    _id: userIds[0],
+    cropname:"Wheat",
+    month:['Jan-21', 'Feb-21', 'Mar-21', 'Apr-21', 'May-21', 'Jun-21', 'Jul-21', 'Aug-21', 'Sep-21', 'Oct-21', 'Nov-21', 'Dec-21', 'Jan-22', 'Feb-22', 'Mar-22', 'Apr-22', 'May-22', 'Jun-22', 'Jul-22', 'Aug-22', 'Sep-22', 'Oct-22', 'Nov-22', 'Dec-22', 'Jan-23', 'Feb-23', 'Mar-23', 'Apr-23', 'May-23', 'Jun-23', 'Jul-23', 'Aug-23', 'Sep-23', 'Oct-23', 'Nov-23', 'Dec-23'],
+    rate:[
+    1931.0,
+    1783.0,
+    1890.0,
+    1965.0,
+    1976.0,
+    2081.0,
+    2062.0,
+    2081.0,
+    2127.0,
+    2135.0,
+    2225.0,
+    2075.0,
+    2100.0,
+    1855.0,
+    1944.0,
+    1884.0,
+    1907.0,
+    1839.0,
+    1752.0,
+    1819.0,
+    1797.0,
+    1838.0,
+    1897.0,
+    1883.00,
+    1729.00,
+    1831.00,
+    1989.00,
+    2028.00,
+    2145.00,
+    2005.00,
+    2000.00,
+    1900.00,
+    1736.00,
+    2300.00,
+    2345.00,
+    2196.00,
+    ],
+    threshold:1974,
+  },
+];

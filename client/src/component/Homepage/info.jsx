@@ -6,7 +6,8 @@ import { useSelector } from "react-redux";
 import Wheater from './wheater';
 const Info = ({userId}) => {
   const [data, setData] = useState([]);
- 
+  const [thre,setThreshold] = useState("");
+  const showGraph = useSelector((state) => state.graph);
  
     // eslint-disable-line react-hooks/exhaustive-deps
   
@@ -16,14 +17,27 @@ const Info = ({userId}) => {
 
   useEffect(() => {
     asyncFetch();
-  }, []);
+  }, [showGraph]);
   const asyncFetch = async () => {
-    await fetch('https://gw.alipayobjects.com/os/bmw-prod/1d565782-dde4-4bb6-8946-ea6a38ccf184.json')
-      .then((response) => response.json())
-      .then((json) => setData(json))
-      .catch((error) => {
-        console.log('fetch data failed', error);
-      });
+    const loggedInResponse = await fetch("http://localhost:3001/crop/cropgraph", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({cropname:showGraph}),
+    });
+    console.log(loggedInResponse);
+    const loggedIn = await loggedInResponse.json();
+    const mydata = []
+    for (let values in loggedIn['month']) {
+      console.log()
+      const l = {
+        Date:loggedIn['month'][values],
+        scales:loggedIn['rate'][values]
+      };
+      mydata.push(l);
+    }
+    console.log(mydata)
+    setData(mydata)
+    setThreshold(loggedIn['threshold'])
   };
 
 
@@ -35,6 +49,11 @@ const Info = ({userId}) => {
     padding: 'auto',
     xField: 'Date',
     yField: 'scales',
+    yAxis: {
+      // type: 'timeCat',
+      tickCount: 4,
+    },
+    
     annotations: [
       // 低于中位数颜色变化
       {
@@ -46,7 +65,7 @@ const Info = ({userId}) => {
       {
         type: 'text',
         position: ['min', 'median'],
-        content: '中位数',
+        content: thre,
         offsetY: -4,
         style: {
           textBaseline: 'bottom',
@@ -60,13 +79,16 @@ const Info = ({userId}) => {
           stroke: '#F4664A',
           lineDash: [2, 2],
         },
+        
       },
+      
     ],
     
   };
   return (
     <div className="graph">
-     <Line {...config} />
+      {console.log(showGraph)}
+     <Line {...config} width={500} height={400} />
     </div>
   )
 }

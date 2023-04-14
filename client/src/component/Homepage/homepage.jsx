@@ -14,7 +14,7 @@ const HomePage = () => {
   const token = useSelector((state) => state.token);
   
     /* Get user */
-    useEffect(() => {
+  /*   useEffect(() => {
       getUser();
     }, []);
 
@@ -33,8 +33,10 @@ const HomePage = () => {
   }
   const {
     location, 
+    crops,
+    Start,
   } = user;
-
+  console.log("Start",Start) */
 
 
   return (
@@ -48,7 +50,7 @@ const HomePage = () => {
         </div>
         <div className="dashboard__middle">
           <Info userId={_id}/>
-          <Wheater location={location}/>
+          <Wheater userId={_id}/>
         </div>
         <div className="dashboard__right">
           <div className="dash__up">

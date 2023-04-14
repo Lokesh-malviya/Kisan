@@ -20,7 +20,7 @@ export const register = async(req,res) => {
             mobileNo,
             password:passwordHash,
             location,
-            aadharnumber
+            aadharnumber,
         });
 
         const savedUser = await newUser.save();

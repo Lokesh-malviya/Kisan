@@ -37,8 +37,13 @@ const UserSchema = new mongoose.Schema({
         default:[]
     },
     landsize:{
-        type:String, 
+        type:String,
+        default:0 
     },
+    Start:{
+        type:Array,
+        default:[],
+    }
 
 },
 { timestamp:true} );
