@@ -3,7 +3,6 @@ import "./header.css";
 import { useDispatch, useSelector } from "react-redux";
 import {  setLogout } from "../../state/index";
 import { Button, Space } from 'antd';
-import { Link } from 'react-router';
 const Navbar = () => {
     const dispatch = useDispatch();
     
@@ -25,7 +24,7 @@ const Navbar = () => {
                     </li>
                     <li className="nav__item">
                         <div to="#" className="nav__link">
-                            <Link to="https://vedant140-kisan-prediction-kisan-29wqvg.streamlit.app/" activeClassName="active">Detect</Link>
+                            <a href="https://vedant140-kisan-prediction-kisan-29wqvg.streamlit.app/">Detect</a>
                         </div>
                     </li>
                     <li className="nav__item">
