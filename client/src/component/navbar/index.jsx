@@ -24,7 +24,7 @@ const Navbar = () => {
                     </li>
                     <li className="nav__item">
                         <div to="#" className="nav__link">
-                            Detect
+                            <Link to="https://vedant140-kisan-prediction-kisan-29wqvg.streamlit.app/" activeClassName="active">Detect</Link>
                         </div>
                     </li>
                     <li className="nav__item">
