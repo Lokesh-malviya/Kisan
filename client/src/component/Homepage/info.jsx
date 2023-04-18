@@ -19,7 +19,7 @@ const Info = ({userId}) => {
     asyncFetch();
   }, [showGraph]);
   const asyncFetch = async () => {
-    const loggedInResponse = await fetch("http://localhost:3001/crop/cropgraph", {
+    const loggedInResponse = await fetch("https://kisan.onrender.com/crop/cropgraph", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({cropname:showGraph}),
