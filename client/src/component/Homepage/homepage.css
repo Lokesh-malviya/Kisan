@@ -165,3 +165,15 @@
     color: #000;
     text-align: start;
 }
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow-y: auto; /* Enable vertical scrolling */
+  }
+  
+  li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+  }

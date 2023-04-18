@@ -114,7 +114,7 @@ const Wheater = ({userId}) => {
     useEffect(() => {
       console.log(confirmLoading)
     const getUser = async ()=>{
-      const response = await fetch(`http://localhost:3001/users/${userId}`,{
+      const response = await fetch(`https://kisan.onrender.com/users/${userId}`,{
         method: "GET",
           headers: { Authorization: `Bearer ${token}` },
         }
@@ -140,7 +140,7 @@ const Wheater = ({userId}) => {
       const addCrops = async (values,onSubmitProps) =>{
         console.log(values);
         values["id"] = userId; 
-        const cropsResponse = await fetch(`http://localhost:3001/users/${userId}/crops`, {
+        const cropsResponse = await fetch(`https://kisan.onrender.com/users/${userId}/crops`, {
           method: "PATCH",
           headers: { Authorization: `Bearer ${token}`,"Content-Type": "application/json" },
           body: JSON.stringify(values),
@@ -170,7 +170,7 @@ const Wheater = ({userId}) => {
           id:userId,
           cropper:items
         }
-        const cropsResponse =  fetch(`http://localhost:3001/users/${userId}/crops-delete`, {
+        const cropsResponse =  fetch(`https://kisan.onrender.com/users/${userId}/crops-delete`, {
           method: "PATCH",
           headers: { Authorization: `Bearer ${token}`,"Content-Type": "application/json" },
           body: JSON.stringify(s),

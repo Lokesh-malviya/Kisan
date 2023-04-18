@@ -6,7 +6,7 @@ import List from '../profile/List'
 import { useSelector } from "react-redux";
 import './homepage.css';
 import Wheater from './wheater';
-
+import Schemes from './schemes.jsx';
 const HomePage = () => {
   const{_id,/* picturePath */} = useSelector((state)=>state.user)
   const [data, setData] = useState([]);
@@ -46,7 +46,7 @@ const HomePage = () => {
       </div>
       <div className="dashboard__subsection">
       <div className="dashboard__left">
-          Hello
+          <Schemes/>
         </div>
         <div className="dashboard__middle">
           <Info userId={_id}/>

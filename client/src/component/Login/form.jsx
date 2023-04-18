@@ -49,7 +49,7 @@ const Forms = () => {
     console.log(values)
 
     const savedUserResponse = await fetch(
-      "http://localhost:3001/auth/register",
+      "https://kisan.onrender.com/auth/register",
       {
         method: "POST",
         body: formData,
@@ -66,7 +66,7 @@ const Forms = () => {
   };
 
   const login = async (values,onSubmitProps) =>{
-    const loggedInResponse = await fetch("http://localhost:3001/auth/login", {
+    const loggedInResponse = await fetch("https://kisan.onrender.com/auth/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(values),
